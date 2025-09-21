@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	float x, y, Q, u;
+	printf("Enter x=");
+		scanf_s("%f", &x);
+	printf("Enter y=");
+	scanf_s("%f", &y);
+	u = 3.205;
+	Q = pow(u, (x + y) / 2) - cbrt((x - 1) / (fabs(y) + 1));
+	printf("Q=%f",Q);
+}
