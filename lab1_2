@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(void) 
+{
+	int a;
+	printf("Enter a=");
+	scanf_s("%d", &a);
+	if (a % 3 == 0) {
+		int d1 = a / 10000000 % 10;
+		int d2 = a / 1000000 % 10;
+		int d3 = a / 100000 % 10;
+		int d4 = a / 10000 % 10;
+		int d5 = a / 1000 % 10;
+		int d6 = a / 100 % 10;
+		int d7 = a / 10 % 10;
+		int d8 = a % 10;
+
+		int temp;
+		temp = d1; d1 = d2; d2 = temp;
+		temp = d3; d3 = d4; d4 = temp;
+		temp = d5; d5 = d6; d6 = temp;
+		temp = d7; d7 = d8; d8 = temp;
+		a = d1 * 10000000 + d2 * 1000000 + d3 * 100000 + d4 * 10000 + d5 * 1000 + d6 * 100 + d7 * 10 + d8;
+		printf("%d", a);
+
+	}
+	else
+		printf("%d", a);
+}
