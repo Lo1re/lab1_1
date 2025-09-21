@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+int main(void) 
+{
+	float k, x, y, z, f1, f2;
+	printf("Enter k=");
+	scanf_s("%f", &k);
+	x = -1.83 * k + 0.5;
+	y = -0.74 * k + 1;
+	z = 1.3 * k + 1.5;
+	f1 = 1 - (x + y * y - z * z * z) / pow(sin(pow(x + z, 2)), 3) + sin(pow(x - z, 2)) / pow(fabs(y + z), 0.34);
+	f2 = 2 * cos(pow(fabs(x * x - f1 / 6), 1 / 3))/(1.5+x*f1+pow(sin(z*z*z),2))+pow(log(z*z), 3);
+	printf("%f",f2);
+}
